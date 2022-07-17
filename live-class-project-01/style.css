@@ -1,0 +1,252 @@
+/* variables */
+:root {
+  --orb: "Orbitron";
+  --pop: "Poppins";
+  --grey: #676565;
+}
+
+/* reset */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* body */
+body {
+  font-family: var(--orb), sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* css */
+.container {
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* navigation */
+
+[aria-label="navbar"] {
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  flex: 4;
+}
+
+.navbar-container div:nth-child(1) {
+  flex: 1;
+}
+
+.navbar-container div:nth-child(2) {
+  flex: 2;
+}
+
+.list {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.list-item {
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.list-item:nth-child(2){
+    order: 3;
+}
+
+.list-item:nth-child(3){
+    order: 2;
+}
+
+.list-item:nth-child(4){
+    order: 4;
+}
+
+.list-item:nth-child(5){
+    order: 5;
+}
+
+.list-item::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  bottom: 0;
+  left: 20px;
+  /* display: flex;
+  justify-content: center; */
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.list-item:hover.list-item::after {
+  width: 50%;
+}
+
+.button-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.button-group div:nth-child(1),
+.button-group div:nth-child(2) {
+  flex: 0;
+}
+svg {
+  margin-top: 5px;
+}
+
+.nav-button {
+  margin-left: 15px;
+  width: 150px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  padding: 5px 35px;
+  background: transparent;
+  font-size: 1.3rem;
+  color: var(--grey);
+}
+
+/* main section */
+
+.banner {
+  position: relative;
+}
+
+.hero-container > span {
+  position: absolute;
+}
+
+.hero-container {
+  padding: 75px 0px;
+  display: grid;
+  grid-template-columns: 700px 1fr;
+}
+
+.square {
+  bottom: 30px;
+  left: 300px;
+  z-index: 0;
+}
+
+.star {
+  top: 22%;
+  right: 160px;
+}
+
+.star img {
+  height: 60px;
+}
+
+.square::after {
+  content: url(./assets/start.png);
+  position: absolute;
+  bottom: 50px;
+  right: -150px;
+}
+
+.globe {
+  left: 50%;
+  top: 15%;
+}
+
+.globe img {
+  height: 70px;
+}
+
+.hero-container > div {
+  flex: 1;
+}
+
+.hero-container > div img {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-container-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-heading {
+  font-size: 4.3rem;
+  margin-top: 100px;
+}
+
+.hero-description {
+  font-family: var(--pop), sans-serif;
+  width: 750px;
+  text-align: center;
+  margin: 60px auto;
+  font-size: 1.1rem;
+  color: var(--grey);
+}
+
+.hero-container-right > div {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.button-email {
+  font-family: var(--orb), sans-serif;
+  margin-left: 5px;
+  border-radius: 10px;
+  padding: 3px 25px;
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--grey);
+  border: 2px solid #000000;
+}
+
+.button-join {
+  font-family: var(--orb), sans-serif;
+  margin-left: 5px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  padding: 3px 10px;
+  margin-left: 15px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.contact-heading {
+  font-size: 1.5rem;
+  font-family: var(--pop), sans-serif;
+  font-weight: 500;
+  color: var(--grey);
+  margin-top: 70px;
+}
+
+.icons {
+  margin-top: 20px;
+}
+
+.icons > * {
+  padding: 10px;
+}
